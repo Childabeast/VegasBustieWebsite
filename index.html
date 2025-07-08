@@ -1,341 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bustie Vegas Trip</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Leaflet.js CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2H1LG2Q2QbKk5Q1Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0=" crossorigin=""/>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bustie Vegas Trip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div id="menu-btn" class="hamburger"><span></span><span></span><span></span></div>
+        <span class="header-title">Bustie Vegas Trip</span>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <div id="menu-btn" class="hamburger"><span></span><span></span><span></span></div>
-    <span class="header-title">Bustie Vegas Trip</span>
-  </header>
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar">
+        <h2>BUSTIE VEGAS TRIP</h2>
+        <ul>
+            <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
+            <li><a href="#hotels" class="nav-link">Hotels</a></li>
+            <li><a href="#comments" class="nav-link">Commentary</a></li>
+            <li><a href="#photos" class="nav-link">Photos</a></li>
+        </ul>
+    </nav>
 
-  <!-- Sidebar Navigation -->
-  <nav id="sidebar">
-    <h2>BUSTIE VEGAS TRIP</h2>
-    <ul>
-      <li><a href="#itinerary" class="nav-link">Itinerary</a></li>
-      <li><a href="#hotels" class="nav-link">Hotels</a></li>
-      <li><a href="#comments" class="nav-link">Commentary</a></li>
-      <li><a href="#photos" class="nav-link">Photos</a></li>
-    </ul>
-  </nav>
+    <main>
+        <!-- Landing Section -->
+        <section id="landing">
+            <div class="landing-content-wrapper">
+                <div class="landing-title-col">
+                    <h1 class="main-title"><span>Vegas</span><span>Itinerary</span></h1>
+                    <div class="countdown-container">
+                        <div class="countdown-label">Days Until Departure:</div>
+                        <div class="countdown-box" id="countdown-days">0</div>
+                    </div>
+                </div>
+                <div class="landing-polaroids">
+                    <div class="polaroid" style="--rot:-8deg"><img id="polaroid-img-1" src="images/mainpoloroids/poloroid1.JPEG" loading="eager" alt="Vegas polaroid 1"></div>
+                    <div class="polaroid" style="--rot:10deg"><img id="polaroid-img-2" src="images/mainpoloroids/poloroid2.JPEG" loading="eager" alt="Vegas polaroid 2"></div>
+                </div>
+            </div>
+        </section>
 
-  <main>
-    <!-- Landing Section -->
-    <section id="landing">
-      <div class="landing-content-wrapper">
-        <div class="landing-title-col">
-          <h1 class="main-title"><span>Vegas</span><span>Itinerary</span></h1>
-          <div class="countdown-container">
-            <div class="countdown-label">Days Until Departure:</div>
-            <div class="countdown-box" id="countdown-days">0</div>
-          </div>
-        </div>
-        <div class="landing-polaroids">
-          <div class="polaroid" style="--rot:-8deg"><img id="polaroid-img-1" src="images/mainpoloroids/poloroid1.JPEG" loading="eager" alt="Vegas polaroid 1"></div>
-          <div class="polaroid" style="--rot:10deg"><img id="polaroid-img-2" src="images/mainpoloroids/poloroid2.JPEG" loading="eager" alt="Vegas polaroid 2"></div>
-        </div>
-      </div>
-    </section>
+        <!-- Itinerary Section -->
+        <section id="itinerary">
+            <div class="itinerary-grid">
+                <!-- Day 1 Card -->
+                <div class="flippable-card" data-card-type="itinerary" data-day="1">
+                    <div class="flipper">
+                        <div class="card-front">
+                            <div class="itinerary-title-group">
+                                <h3>Day 1</h3>
+                                <div class="card-date">Sept 11th</div>
+                            </div>
+                            <ul>
+                                <li><strong>08:00</strong> Breakfast at hotel</li>
+                                <li><strong>10:00</strong> Pool time</li>
+                                <li><strong>12:00</strong> Lunch on the Strip</li>
+                                <li><strong>14:00</strong> Casino games</li>
+                            </ul>
+                        </div>
+                        <div class="card-back">
+                            <div class="itinerary-back-content">
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day1/1.jpg" alt="Day 1 Photo 1"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day1/2.jpg" alt="Day 1 Photo 2"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day1/3.jpg" alt="Day 1 Photo 3"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day1/4.jpg" alt="Day 1 Photo 4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Day 2 Card -->
+                <div class="flippable-card" data-card-type="itinerary" data-day="2">
+                    <div class="flipper">
+                        <div class="card-front">
+                            <div class="itinerary-title-group">
+                                <h3>Day 2</h3>
+                                <div class="card-date">Sept 12th</div>
+                            </div>
+                            <ul>
+                                <li><strong>09:00</strong> Brunch at Bellagio</li>
+                                <li><strong>11:00</strong> Explore Fremont Street</li>
+                                <li><strong>15:00</strong> Shopping at Forum Shops</li>
+                                <li><strong>20:00</strong> Cirque du Soleil show</li>
+                            </ul>
+                        </div>
+                        <div class="card-back">
+                            <div class="itinerary-back-content">
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day2/1.jpg" alt="Day 2 Photo 1"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day2/2.jpg" alt="Day 2 Photo 2"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day2/3.jpg" alt="Day 2 Photo 3"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day2/4.jpg" alt="Day 2 Photo 4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Day 3 Card -->
+                <div class="flippable-card" data-card-type="itinerary" data-day="3">
+                    <div class="flipper">
+                        <div class="card-front">
+                            <div class="itinerary-title-group">
+                                <h3>Day 3</h3>
+                                <div class="card-date">Sept 13th</div>
+                            </div>
+                            <ul>
+                                <li><strong>10:00</strong> Spa morning</li>
+                                <li><strong>13:00</strong> Lunch at Venetian</li>
+                                <li><strong>16:00</strong> Pitbull Concert</li>
+                                <li><strong>21:00</strong> Nightclub outing</li>
+                            </ul>
+                        </div>
+                        <div class="card-back">
+                            <div class="itinerary-back-content">
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day3/1.jpg" alt="Day 3 Photo 1"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day3/2.jpg" alt="Day 3 Photo 2"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day3/3.jpg" alt="Day 3 Photo 3"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day3/4.jpg" alt="Day 3 Photo 4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Day 4 Card -->
+                <div class="flippable-card" data-card-type="itinerary" data-day="4">
+                    <div class="flipper">
+                        <div class="card-front">
+                            <div class="itinerary-title-group">
+                                <h3>Day 4</h3>
+                                <div class="card-date">Sept 14th</div>
+                            </div>
+                            <ul>
+                                <li><strong>09:00</strong> Breakfast & check-out</li>
+                                <li><strong>11:00</strong> Last-minute sightseeing</li>
+                                <li><strong>13:00</strong> Lunch at local favorite</li>
+                                <li><strong>15:00</strong> Departure</li>
+                            </ul>
+                        </div>
+                        <div class="card-back">
+                            <div class="itinerary-back-content">
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day4/1.jpg" alt="Day 4 Photo 1"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day4/2.jpg" alt="Day 4 Photo 2"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day4/3.jpg" alt="Day 4 Photo 3"></div>
+                                <div class="itinerary-back-photo"><img src="images/itinerary/day4/4.jpg" alt="Day 4 Photo 4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Itinerary Section -->
-    <section id="itinerary">
-      <div class="itinerary-grid">
-        <!-- Day 1 Card -->
-        <div class="flippable-card" data-card-type="itinerary" data-day="1">
-          <div class="flipper">
-            <div class="card-front">
-              <h3>Day 1</h3>
-              <ul>
-                <li><strong>08:00</strong> Breakfast at hotel</li>
-                <li><strong>10:00</strong> Pool time</li>
-                <li><strong>12:00</strong> Lunch on the Strip</li>
-                <li><strong>14:00</strong> Casino games</li>
-                <li><strong>19:00</strong> Welcome dinner</li>
-              </ul>
-            </div>
-            <div class="card-back itinerary-back-content">
-              <div class="itinerary-back-photo"><img src="images/itinerary/day1/1.jpg" alt="Day 1 Photo 1"></div>
-              <div class="itinerary-back-photo"><img src="images/itinerary/day1/2.jpg" alt="Day 1 Photo 2"></div>
-              <div class="itinerary-back-photo"><img src="images/itinerary/day1/3.jpg" alt="Day 1 Photo 3"></div>
-              <div class="itinerary-back-photo"><img src="images/itinerary/day1/4.jpg" alt="Day 1 Photo 4"></div>
-            </div>
-          </div>
+        <!-- Hotels Section -->
+        <div class="section-bar">
+            <span class="section-bar-title">Possible Hotels</span>
         </div>
-        <!-- Day 2 Card -->
-        <div class="flippable-card" data-card-type="itinerary" data-day="2">
-            <div class="flipper">
-              <div class="card-front">
-                <h3>Day 2</h3>
-                <ul>
-                  <li><strong>09:00</strong> Brunch at Bellagio</li>
-                  <li><strong>11:00</strong> Explore Fremont Street</li>
-                  <li><strong>15:00</strong> Shopping at Forum Shops</li>
-                  <li><strong>20:00</strong> Cirque du Soleil show</li>
-                </ul>
-              </div>
-              <div class="card-back itinerary-back-content">
-                <div class="itinerary-back-photo"><img src="images/itinerary/day2/1.jpg" alt="Day 2 Photo 1"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day2/2.jpg" alt="Day 2 Photo 2"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day2/3.jpg" alt="Day 2 Photo 3"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day2/4.jpg" alt="Day 2 Photo 4"></div>
-              </div>
+        <section id="hotels">
+            <div class="hotel-list">
+                <!-- Luxor -->
+                <div class="flippable-card" data-card-type="hotel" data-hotel-id="luxor">
+                    <div class="flipper">
+                        <div class="card-front hotel-card-front">
+                            <div>
+                                <h3>Luxor</h3>
+                                <img src="images/hotels/1.jpg" class="hotel-image-placeholder" alt="Luxor Hotel">
+                                <div class="hotel-details">
+                                    <p class="detail-item"><strong>Price:</strong> $75 - $85 / night</p>
+                                    <p class="detail-item"><strong>Vibe:</strong> Ancient Egypt spectacle</p>
+                                    <p class="detail-item"><strong>Best For:</strong> Unique architecture lovers</p>
+                                </div>
+                            </div>
+                            <div class="hotel-card-bottom-bar">
+                                <button class="hotel-action-btn" title="Like Hotel" data-hotel="Luxor">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <div class="hotel-like-circle" id="hotel-like-luxor">0</div>
+                            </div>
+                        </div>
+                        <div class="card-back hotel-card-back">
+                            <div class="map-frame">
+                                <div class="map-container" data-hotel-map="luxor">
+                                    <div class="hotel-leaflet-map" id="hotel-map-luxor"></div>
+                                </div>
+                                <div class="map-footer">
+                                    <span class="walk-time">~1.2 hr walk</span>
+                                    <a href="https://luxor.mgmresorts.com/en.html" target="_blank" class="btn visit-btn">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flamingo -->
+                <div class="flippable-card" data-card-type="hotel" data-hotel-id="flamingo">
+                    <div class="flipper">
+                        <div class="card-front hotel-card-front">
+                            <div>
+                                <h3>Flamingo</h3>
+                                <img src="images/hotels/2.jpg" class="hotel-image-placeholder" alt="Flamingo Hotel">
+                                <div class="hotel-details">
+                                    <p class="detail-item"><strong>Price:</strong> $90 - $110 / night</p>
+                                    <p class="detail-item"><strong>Vibe:</strong> Classic Vegas tropical</p>
+                                    <p class="detail-item"><strong>Best For:</strong> Center-strip action & pools</p>
+                                </div>
+                            </div>
+                            <div class="hotel-card-bottom-bar">
+                                <button class="hotel-action-btn" title="Like Hotel" data-hotel="Flamingo">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <div class="hotel-like-circle" id="hotel-like-flamingo">0</div>
+                            </div>
+                        </div>
+                        <div class="card-back hotel-card-back">
+                            <div class="map-frame">
+                                <div class="map-container" data-hotel-map="flamingo">
+                                    <div class="hotel-leaflet-map" id="hotel-map-flamingo"></div>
+                                </div>
+                                <div class="map-footer">
+                                    <span class="walk-time">~35 min walk</span>
+                                    <a href="https://www.caesars.com/flamingo-las-vegas" target="_blank" class="btn visit-btn">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Harrah's -->
+                <div class="flippable-card" data-card-type="hotel" data-hotel-id="harrahs">
+                    <div class="flipper">
+                        <div class="card-front hotel-card-front">
+                            <div>
+                                <h3>Harrah’s</h3>
+                                <img src="images/hotels/3.jpg" class="hotel-image-placeholder" alt="Harrah's Hotel">
+                                <div class="hotel-details">
+                                    <p class="detail-item"><strong>Price:</strong> $60 - $80 / night</p>
+                                    <p class="detail-item"><strong>Vibe:</strong> Friendly & reliable</p>
+                                    <p class="detail-item"><strong>Best For:</strong> Value and location</p>
+                                </div>
+                            </div>
+                            <div class="hotel-card-bottom-bar">
+                                <button class="hotel-action-btn" title="Like Hotel" data-hotel="Harrah's">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <div class="hotel-like-circle" id="hotel-like-harrahs">0</div>
+                            </div>
+                        </div>
+                        <div class="card-back hotel-card-back">
+                            <div class="map-frame">
+                                <div class="map-container" data-hotel-map="harrahs">
+                                    <div class="hotel-leaflet-map" id="hotel-map-harrahs"></div>
+                                </div>
+                                <div class="map-footer">
+                                    <span class="walk-time">~30 min walk</span>
+                                    <a href="https://www.caesars.com/harrahs-las-vegas" target="_blank" class="btn visit-btn">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Treasure Island -->
+                <div class="flippable-card" data-card-type="hotel" data-hotel-id="treasureisland">
+                    <div class="flipper">
+                        <div class="card-front hotel-card-front">
+                            <div>
+                                <h3>Treasure Island</h3>
+                                <img src="images/hotels/4.jpg" class="hotel-image-placeholder" alt="Treasure Island Hotel">
+                                <div class="hotel-details">
+                                    <p class="detail-item"><strong>Price:</strong> $100 - $120 / night</p>
+                                    <p class="detail-item"><strong>Vibe:</strong> Pirate fun, shopper's delight</p>
+                                    <p class="detail-item"><strong>Best For:</strong> Free parking & mall access</p>
+                                </div>
+                            </div>
+                            <div class="hotel-card-bottom-bar">
+                                <button class="hotel-action-btn" title="Like Hotel" data-hotel="Treasure Island">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <div class="hotel-like-circle" id="hotel-like-treasureisland">0</div>
+                            </div>
+                        </div>
+                        <div class="card-back hotel-card-back">
+                            <div class="map-frame">
+                                <div class="map-container" data-hotel-map="treasureisland">
+                                    <div class="hotel-leaflet-map" id="hotel-map-treasureisland"></div>
+                                </div>
+                                <div class="map-footer">
+                                    <span class="walk-time">~25 min walk</span>
+                                    <a href="https://treasureisland.com/" target="_blank" class="btn visit-btn">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Excalibur -->
+                <div class="flippable-card" data-card-type="hotel" data-hotel-id="excalibur">
+                    <div class="flipper">
+                        <div class="card-front hotel-card-front">
+                            <div>
+                                <h3>Excalibur</h3>
+                                <img src="images/hotels/5.jpg" class="hotel-image-placeholder" alt="Excalibur Hotel">
+                                <div class="hotel-details">
+                                    <p class="detail-item"><strong>Price:</strong> $70 - $80 / night</p>
+                                    <p class="detail-item"><strong>Vibe:</strong> Medieval castle adventure</p>
+                                    <p class="detail-item"><strong>Best For:</strong> Families & budget fun</p>
+                                </div>
+                            </div>
+                            <div class="hotel-card-bottom-bar">
+                                <button class="hotel-action-btn" title="Like Hotel" data-hotel="Excalibur">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                                </button>
+                                <div class="hotel-like-circle" id="hotel-like-excalibur">0</div>
+                            </div>
+                        </div>
+                        <div class="card-back hotel-card-back">
+                            <div class="map-frame">
+                                <div class="map-container" data-hotel-map="excalibur">
+                                    <div class="hotel-leaflet-map" id="hotel-map-excalibur"></div>
+                                </div>
+                                <div class="map-footer">
+                                    <span class="walk-time">~1.1 hr walk</span>
+                                    <a href="https://excalibur.mgmresorts.com/en.html" target="_blank" class="btn visit-btn">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Day 3 Card -->
-        <div class="flippable-card" data-card-type="itinerary" data-day="3">
-            <div class="flipper">
-              <div class="card-front">
-                <h3>Day 3</h3>
-                <ul>
-                  <li><strong>10:00</strong> Spa morning</li>
-                  <li><strong>13:00</strong> Lunch at Venetian</li>
-                  <li><strong>16:00</strong> Pitbull Concert</li>
-                  <li><strong>21:00</strong> Nightclub outing</li>
-                </ul>
-              </div>
-              <div class="card-back itinerary-back-content">
-                <div class="itinerary-back-photo"><img src="images/itinerary/day3/1.jpg" alt="Day 3 Photo 1"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day3/2.jpg" alt="Day 3 Photo 2"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day3/3.jpg" alt="Day 3 Photo 3"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day3/4.jpg" alt="Day 3 Photo 4"></div>
-              </div>
-            </div>
-        </div>
-        <!-- Day 4 Card -->
-        <div class="flippable-card" data-card-type="itinerary" data-day="4">
-            <div class="flipper">
-              <div class="card-front">
-                <h3>Day 4</h3>
-                <ul>
-                  <li><strong>09:00</strong> Breakfast & check-out</li>
-                  <li><strong>11:00</strong> Last-minute sightseeing</li>
-                  <li><strong>13:00</strong> Lunch at local favorite</li>
-                  <li><strong>15:00</strong> Departure</li>
-                </ul>
-              </div>
-              <div class="card-back itinerary-back-content">
-                <div class="itinerary-back-photo"><img src="images/itinerary/day4/1.jpg" alt="Day 4 Photo 1"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day4/2.jpg" alt="Day 4 Photo 2"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day4/3.jpg" alt="Day 4 Photo 3"></div>
-                <div class="itinerary-back-photo"><img src="images/itinerary/day4/4.jpg" alt="Day 4 Photo 4"></div>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Hotels Section -->
-    <div class="section-bar">
-        <span class="section-bar-title">Possible Hotels</span>
+        <!-- Bustie Chat Section -->
+        <div class="section-bar">
+            <span class="section-bar-title">Bustie Chat</span>
+        </div>
+        <section id="comments">
+            <div id="comment-list" class="comment-list"></div>
+            <div style="width:100%;display:flex;justify-content:center;margin-top:2rem;">
+                <button id="add-comment-btn" class="btn">Add Comment</button>
+            </div>
+        </section>
+
+        <!-- Photos Section -->
+        <div class="section-bar">
+            <span class="section-bar-title">Photos</span>
+        </div>
+        <section id="photos">
+            <div class="polaroid-gallery" id="polaroid-gallery">
+                <div class="polaroid-frame"><img src="https://placehold.co/220x220/9d4edd/ffffff?text=Day+1" alt="Polaroid 1" class="polaroid-gallery-img" data-img="https://placehold.co/600x400/9d4edd/ffffff?text=Day+1"><div class="polaroid-caption">Day 1</div></div>
+                <div class="polaroid-frame"><img src="https://placehold.co/220x220/0984e3/ffffff?text=Day+2" alt="Polaroid 2" class="polaroid-gallery-img" data-img="https://placehold.co/600x400/0984e3/ffffff?text=Day+2"><div class="polaroid-caption">Day 2</div></div>
+                <div class="polaroid-frame"><img src="https://placehold.co/220x220/d63031/ffffff?text=Day+3" alt="Polaroid 3" class="polaroid-gallery-img" data-img="https://placehold.co/600x400/d63031/ffffff?text=Day+3"><div class="polaroid-caption">Day 3</div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fullscreen Modal -->
+    <div id="fullscreen-modal">
+        <img id="fullscreen-image" src="" alt="Fullscreen view">
     </div>
-    <section id="hotels">
-      <div class="hotel-list">
-        <!-- Luxor -->
-        <div class="flippable-card" data-card-type="hotel">
-            <div class="flipper">
-                <div class="card-front hotel-card-front">
-                    <button class="hotel-action-btn" title="Hotel Action" tabindex="0" data-hotel="Luxor">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M16.5 4.5c-1.74 0-3.41 1.01-4.5 2.09C10.91 5.51 9.24 4.5 7.5 4.5 5.01 4.5 3 6.51 3 9c0 5.25 9 10.5 9 10.5s9-5.25 9-10.5c0-2.49-2.01-4.5-4.5-4.5z"/>
-                        </svg>
-                    </button>
-                    <div class="hotel-like-circle" id="hotel-like-luxor">0</div>
-                    <h3>Luxor</h3>
-                    <p><strong>Details:</strong> 3.5★ | South Strip | $75-85</p>
-                    <p><strong>Features:</strong> Pyramid shaped casino, 10 restaurants, multiple bars, 4 outdoor pools, Titanic exhibit.</p>
-                </div>
-                <div class="card-back hotel-card-back">
-                    <div class="map-container">
-                    <div class="leaflet-hotel-map" id="hotel-map-luxor"></div>
-                </div>
-                <div class="map-footer">
-                    <span class="walk-time">~1.2 hr walk</span>
-                    <a href="https://luxor.mgmresorts.com/en.html" target="_blank" class="btn visit-btn">Visit Website</a>
-                </div>
-                </div>
-            </div>
-        </div>
-        <!-- Flamingo -->
-        <div class="flippable-card" data-card-type="hotel">
-            <div class="flipper">
-                <div class="card-front hotel-card-front">
-                    <button class="hotel-action-btn" title="Hotel Action" tabindex="0" data-hotel="Flamingo">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M16.5 4.5c-1.74 0-3.41 1.01-4.5 2.09C10.91 5.51 9.24 4.5 7.5 4.5 5.01 4.5 3 6.51 3 9c0 5.25 9 10.5 9 10.5s9-5.25 9-10.5c0-2.49-2.01-4.5-4.5-4.5z"/>
-                        </svg>
-                    </button>
-                    <div class="hotel-like-circle" id="hotel-like-flamingo">0</div>
-                    <h3>Flamingo</h3>
-                    <p><strong>Details:</strong> 3.5★ | Center Strip | $90-110</p>
-                    <p><strong>Features:</strong> Classic resort with famous tropical pool complex & wildlife habitat. Near Promenade & Caesar’s Palace.</p>
-                </div>
-                <div class="card-back hotel-card-back">
-                    <div class="map-container">
-                        <svg class="map-svg" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice"><g fill="#d1e1f0" stroke="#a2b9d1" stroke-width="0.5"><path d="M0 0h200v300H0z"/><path d="M90 0v300" stroke="#e6f0fa" stroke-width="12"/><path d="M90 0v300" stroke="#ffffff" stroke-width="8"/><path d="M0 150h200" stroke="#ffffff" stroke-width="2" stroke-dasharray="4 4"/></g></svg>
-                        <div class="map-pin hotel-pin" style="top: 40%; left: 48%;"><div class="pin-label">Flamingo</div></div>
-                        <div class="map-pin pitbull-pin" style="top: 25%; left: 55%;"><div class="pin-label">Pitbull</div></div>
-                    </div>
-                    <div class="map-footer">
-                        <span class="walk-time">~35 min walk</span>
-                        <a href="https://www.caesars.com/flamingo-las-vegas" target="_blank" class="btn visit-btn">Visit Website</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Harrah's -->
-        <div class="flippable-card" data-card-type="hotel">
-            <div class="flipper">
-                <div class="card-front hotel-card-front">
-                    <button class="hotel-action-btn" title="Hotel Action" tabindex="0" data-hotel="Harrah's">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M16.5 4.5c-1.74 0-3.41 1.01-4.5 2.09C10.91 5.51 9.24 4.5 7.5 4.5 5.01 4.5 3 6.51 3 9c0 5.25 9 10.5 9 10.5s9-5.25 9-10.5c0-2.49-2.01-4.5-4.5-4.5z"/>
-                        </svg>
-                    </button>
-                    <div class="hotel-like-circle" id="hotel-like-harrah's">0</div>
-                    <h3>Harrah’s</h3>
-                    <p><strong>Details:</strong> 3.5★ | Center Strip | $60-80</p>
-                    <p><strong>Features:</strong> Great value & location. Pool, spa, several restaurants, and access to the Monorail.</p>
-                </div>
-                <div class="card-back hotel-card-back">
-                    <div class="map-container">
-                        <svg class="map-svg" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice"><g fill="#d1e1f0" stroke="#a2b9d1" stroke-width="0.5"><path d="M0 0h200v300H0z"/><path d="M90 0v300" stroke="#e6f0fa" stroke-width="12"/><path d="M90 0v300" stroke="#ffffff" stroke-width="8"/><path d="M0 150h200" stroke="#ffffff" stroke-width="2" stroke-dasharray="4 4"/></g></svg>
-                        <div class="map-pin hotel-pin" style="top: 35%; left: 52%;"><div class="pin-label">Harrah's</div></div>
-                        <div class="map-pin pitbull-pin" style="top: 25%; left: 55%;"><div class="pin-label">Pitbull</div></div>
-                    </div>
-                    <div class="map-footer">
-                        <span class="walk-time">~30 min walk</span>
-                        <a href="https://www.caesars.com/harrahs-las-vegas" target="_blank" class="btn visit-btn">Visit Website</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Treasure Island -->
-        <div class="flippable-card" data-card-type="hotel">
-            <div class="flipper">
-                <div class="card-front hotel-card-front">
-                    <button class="hotel-action-btn" title="Hotel Action" tabindex="0" data-hotel="Treasure Island">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M16.5 4.5c-1.74 0-3.41 1.01-4.5 2.09C10.91 5.51 9.24 4.5 7.5 4.5 5.01 4.5 3 6.51 3 9c0 5.25 9 10.5 9 10.5s9-5.25 9-10.5c0-2.49-2.01-4.5-4.5-4.5z"/>
-                        </svg>
-                    </button>
-                    <div class="hotel-like-circle" id="hotel-like-treasure island">0</div>
-                    <h3>Treasure Island</h3>
-                    <p><strong>Details:</strong> 4★ | North Strip | $100-120</p>
-                    <p><strong>Features:</strong> Tropical pool, spa, 9 restaurants, bridge to Fashion Show Mall. ONLY hotel with free parking.</p>
-                </div>
-                <div class="card-back hotel-card-back">
-                    <div class="map-container">
-                        <svg class="map-svg" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice"><g fill="#d1e1f0" stroke="#a2b9d1" stroke-width="0.5"><path d="M0 0h200v300H0z"/><path d="M90 0v300" stroke="#e6f0fa" stroke-width="12"/><path d="M90 0v300" stroke="#ffffff" stroke-width="8"/><path d="M0 150h200" stroke="#ffffff" stroke-width="2" stroke-dasharray="4 4"/></g></svg>
-                        <div class="map-pin hotel-pin" style="top: 30%; left: 45%;"><div class="pin-label">Treasure Island</div></div>
-                        <div class="map-pin pitbull-pin" style="top: 25%; left: 55%;"><div class="pin-label">Pitbull</div></div>
-                    </div>
-                    <div class="map-footer">
-                        <span class="walk-time">~25 min walk</span>
-                        <a href="https://treasureisland.com/" target="_blank" class="btn visit-btn">Visit Website</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Excalibur -->
-        <div class="flippable-card" data-card-type="hotel">
-            <div class="flipper">
-                <div class="card-front hotel-card-front">
-                    <button class="hotel-action-btn" title="Hotel Action" tabindex="0" data-hotel="Excalibur">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M16.5 4.5c-1.74 0-3.41 1.01-4.5 2.09C10.91 5.51 9.24 4.5 7.5 4.5 5.01 4.5 3 6.51 3 9c0 5.25 9 10.5 9 10.5s9-5.25 9-10.5c0-2.49-2.01-4.5-4.5-4.5z"/>
-                        </svg>
-                    </button>
-                    <div class="hotel-like-circle" id="hotel-like-excalibur">0</div>
-                    <h3>Excalibur</h3>
-                    <p><strong>Details:</strong> 3★ | South Strip | $70-80</p>
-                    <p><strong>Features:</strong> Medieval themed. 13 restaurants, 7 bars, 4 outdoor pools.</p>
-                </div>
-                <div class="card-back hotel-card-back">
-                    <div class="map-container">
-                        <svg class="map-svg" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid slice"><g fill="#d1e1f0" stroke="#a2b9d1" stroke-width="0.5"><path d="M0 0h200v300H0z"/><path d="M90 0v300" stroke="#e6f0fa" stroke-width="12"/><path d="M90 0v300" stroke="#ffffff" stroke-width="8"/><path d="M0 150h200" stroke="#ffffff" stroke-width="2" stroke-dasharray="4 4"/></g></svg>
-                        <div class="map-pin hotel-pin" style="top: 75%; left: 55%;"><div class="pin-label">Excalibur</div></div>
-                        <div class="map-pin pitbull-pin" style="top: 25%; left: 55%;"><div class="pin-label">Pitbull</div></div>
-                    </div>
-                    <div class="map-footer">
-                        <span class="walk-time">~1.1 hr walk</span>
-                        <a href="https://excalibur.mgmresorts.com/en.html" target="_blank" class="btn visit-btn">Visit Website</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Bustie Chat Section -->
-    <div class="section-bar">
-        <span class="section-bar-title">Bustie Chat</span>
+    <!-- Comment Modal -->
+    <div id="comment-modal-backdrop">
+        <div id="comment-modal">
+            <h3>Add Your Comment</h3>
+            <div class="modal-input-group">
+                <label for="comment-name">Name</label>
+                <input type="text" id="comment-name" placeholder="Enter your name">
+            </div>
+            <div class="modal-input-group">
+                <label for="comment-text">Comment</label>
+                <textarea id="comment-text" placeholder="Enter your comment"></textarea>
+            </div>
+            <div class="modal-actions">
+                <button id="cancel-comment-btn" class="btn" style="background-color: #7f8c8d;">Cancel</button>
+                <button id="post-comment-btn" class="btn">Post</button>
+            </div>
+        </div>
     </div>
-    <section id="comments">
-      <div id="comment-list" class="comment-list"></div>
-      <div style="width:100%;display:flex;justify-content:center;margin-top:4rem;">
-        <button id="add-comment-btn" class="btn">Add Comment</button>
-      </div>
-    </section>
-    
-    <!-- Photos Section -->
-    <div class="section-bar">
-      <span class="section-bar-title">Photos</span>
-    </div>
-    <section id="photos">
-      <div class="polaroid-gallery">
-        <div class="polaroid-frame"><img src="images/gallery/1.jpg" alt="Polaroid 1" class="polaroid-gallery-img" data-img="images/gallery/1.jpg"><div class="polaroid-caption">Day 1</div></div>
-        <div class="polaroid-frame"><img src="images/gallery/2.jpg" alt="Polaroid 2" class="polaroid-gallery-img" data-img="images/gallery/2.jpg"><div class="polaroid-caption">Day 2</div></div>
-        <div class="polaroid-frame"><img src="images/gallery/3.jpg" alt="Polaroid 3" class="polaroid-gallery-img" data-img="images/gallery/3.jpg"><div class="polaroid-caption">Day 3</div></div>
-        <div class="polaroid-frame"><img src="images/gallery/4.jpg" alt="Polaroid 4" class="polaroid-gallery-img" data-img="images/gallery/4.jpg"><div class="polaroid-caption">Day 4</div></div>
-        <div class="polaroid-frame"><img src="images/gallery/5.jpg" alt="Polaroid 5" class="polaroid-gallery-img" data-img="images/gallery/5.jpg"><div class="polaroid-caption">Day 5</div></div>
-        <div class="polaroid-frame"><img src="images/gallery/6.jpg" alt="Polaroid 6" class="polaroid-gallery-img" data-img="images/gallery/6.jpg"><div class="polaroid-caption">Day 6</div></div>
-      </div>
-      <div class="add-photo-btn-wrapper">
-        <input type="file" id="photo-upload-input" hidden accept="image/*">
-        <button id="add-photo-btn" class="btn">Add Photo</button>
-      </div>
-      <div id="photo-grid" class="photo-grid">
-        <!-- Photos from Firebase will be added here -->
-      </div>
-    </section>
 
-  </main>
-
-  <!-- Fullscreen Modal -->
-  <div id="fullscreen-modal">
-    <img id="fullscreen-image" src="" alt="Fullscreen view">
-  </div>
-
-  <!-- Comment Modal -->
-  <div id="comment-modal-backdrop">
-      <div id="comment-modal">
-          <h3>Add Your Comment</h3>
-          <div class="modal-input-group">
-              <label for="comment-name">Name</label>
-              <input type="text" id="comment-name" placeholder="Enter your name">
-          </div>
-          <div class="modal-input-group">
-              <label for="comment-text">Comment</label>
-              <textarea id="comment-text" placeholder="Enter your comment"></textarea>
-          </div>
-          <div class="modal-actions">
-              <button id="cancel-comment-btn" class="btn" style="background-color: #7f8c8d;">Cancel</button>
-              <button id="post-comment-btn" class="btn">Post</button>
-          </div>
-      </div>
-  </div>
-  
-  <!-- Leaflet.js JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j6kGQ6l3b6tFQw5Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q0Q=" crossorigin=""></script>
-  <script type="module" src="main.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
